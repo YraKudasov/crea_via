@@ -798,61 +798,114 @@
 <!-- ═══════════════════════════════════════════════════════════
      PROCESS
 ═══════════════════════════════════════════════════════════ -->
-<section id="process" class="py-24 bg-white overflow-hidden relative">
-  <img src="images/background_line/Group 311.png" alt="" class="absolute bottom-0 right-0 opacity-45 pointer-events-none select-none" style="width:100vw; transform:rotate(180deg); transform-origin:bottom right;" aria-hidden="true" />
-  <div class="max-w-7xl mx-auto px-6">
+<section id="process" class="py-20 md:py-28 overflow-hidden" style="background:#ede8f8;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6">
 
+    <!-- Header -->
     <div class="text-center mb-16 fade-up">
-      <span class="inline-block bg-purple-50 text-cr-purple text-xs font-semibold px-4 py-1.5 rounded-full mb-4">How It Works</span>
-      <h2 class="font-display text-4xl lg:text-5xl font-bold text-cr-dark">
-        Simple Process.<br/><span class="text-cr-purple">Real Growth.</span>
+      <span class="inline-block text-gray-500 text-xs font-bold px-4 py-1.5 rounded-full mb-5 uppercase tracking-widest" style="background:rgba(0,0,0,0.07); font-family:'Montserrat',sans-serif;">How We Work</span>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-cr-dark mb-4 leading-tight" style="font-family:'Montserrat',sans-serif;">
+        Simple Process. <span class="text-cr-purple">Real Growth.</span>
       </h2>
+      <p class="text-gray-500 text-base sm:text-lg max-w-md mx-auto leading-relaxed" style="font-family:'Montserrat',sans-serif;">
+        We make design and marketing clear,<br/>fast and focused on results.
+      </p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Steps + connecting line -->
+    <div class="relative mb-16">
 
-      <div class="fade-up delay-1 relative">
-        <div class="bg-gray-50 rounded-3xl p-8 h-full">
-          <div class="w-12 h-12 bg-cr-lime rounded-2xl flex items-center justify-center font-display font-bold text-cr-dark text-xl mb-6">01</div>
-          <h3 class="font-bold text-cr-dark text-lg mb-3">Discovery</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">We dive deep into your brand, goals, audience, and competitors to understand what sets you apart.</p>
-        </div>
-        <div class="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 w-6 h-px bg-cr-purple/30 z-10">
-          <div class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-cr-purple"></div>
-        </div>
+      <!-- Wavy dashed connecting line (desktop only) -->
+      <div class="hidden lg:block absolute left-0 right-0 z-0" style="top:40px; pointer-events:none;">
+        <svg width="100%" height="80" viewBox="0 0 1280 80" preserveAspectRatio="xMidYMid meet" fill="none" aria-hidden="true">
+          <path d="M 32 40 C 110 40 110 58 195 58 C 280 58 280 40 358 40 C 436 40 436 22 521 22 C 606 22 606 40 684 40 C 762 40 762 58 847 58 C 932 58 932 40 1010 40 C 1055 40 1090 40 1110 40"
+                stroke="#7B2FBE" stroke-width="2" stroke-dasharray="7 5" stroke-linecap="round"/>
+          <circle cx="195" cy="58" r="6" fill="#AAFF3E"/>
+          <circle cx="521" cy="22" r="6" fill="#AAFF3E"/>
+          <circle cx="847" cy="58" r="6" fill="#AAFF3E"/>
+          <circle cx="1110" cy="40" r="6" fill="#AAFF3E"/>
+        </svg>
       </div>
 
-      <div class="fade-up delay-2 relative">
-        <div class="bg-gray-50 rounded-3xl p-8 h-full">
-          <div class="w-12 h-12 bg-cr-purple rounded-2xl flex items-center justify-center font-display font-bold text-white text-xl mb-6">02</div>
-          <h3 class="font-bold text-cr-dark text-lg mb-3">Strategy</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">We build a data-backed plan — positioning, messaging, and a creative direction tailored to your goals.</p>
-        </div>
-        <div class="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 w-6 h-px bg-cr-purple/30 z-10">
-          <div class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-cr-purple"></div>
-        </div>
-      </div>
+      <!-- 4 step columns -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
 
-      <div class="fade-up delay-3 relative">
-        <div class="bg-gray-50 rounded-3xl p-8 h-full">
-          <div class="w-12 h-12 bg-cr-dark rounded-2xl flex items-center justify-center font-display font-bold text-cr-lime text-xl mb-6">03</div>
-          <h3 class="font-bold text-cr-dark text-lg mb-3">Design & Build</h3>
-          <p class="text-gray-500 text-sm leading-relaxed">Pixel-perfect design and development — from brand identity to fully functional website.</p>
+        <!-- Step 01 -->
+        <div class="fade-up delay-1 relative z-10">
+          <div class="text-gray-300 font-extrabold leading-none mb-2" style="font-size:2.25rem; font-family:'Montserrat',sans-serif;">01</div>
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background:#d9d3f0;">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="7.5" stroke="#7B2FBE" stroke-width="2"/>
+              <line x1="17.5" y1="17.5" x2="24" y2="24" stroke="#7B2FBE" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="font-extrabold text-cr-dark text-xl leading-snug mb-2" style="font-family:'Montserrat',sans-serif;">Understand<br/>Your Business</h3>
+          <div class="w-10 h-0.5 mb-4" style="background:#AAFF3E;"></div>
+          <p class="text-gray-500 text-sm leading-relaxed mb-5" style="font-family:'Montserrat',sans-serif;">We dive deep into your goals, audience and business needs to define what drives results.</p>
+          <span class="inline-block border border-gray-300 text-gray-500 text-xs font-medium px-4 py-2 rounded-full" style="font-family:'Montserrat',sans-serif; background:rgba(255,255,255,0.7);">Research &amp; Analysis</span>
         </div>
-        <div class="hidden lg:block absolute top-1/2 -right-3 -translate-y-1/2 w-6 h-px bg-cr-purple/30 z-10">
-          <div class="absolute right-0 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-cr-purple"></div>
-        </div>
-      </div>
 
-      <div class="fade-up delay-4">
-        <div class="bg-cr-dark rounded-3xl p-8 h-full">
-          <div class="w-12 h-12 bg-cr-lime rounded-2xl flex items-center justify-center font-display font-bold text-cr-dark text-xl mb-6">04</div>
-          <h3 class="font-bold text-white text-lg mb-3">Launch & Grow</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">We launch, monitor results, and continue optimizing so your business keeps growing.</p>
+        <!-- Step 02 -->
+        <div class="fade-up delay-2 relative z-10">
+          <div class="text-gray-300 font-extrabold leading-none mb-2" style="font-size:2.25rem; font-family:'Montserrat',sans-serif;">02</div>
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background:#d9d3f0;">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <rect x="6" y="4" width="16" height="20" rx="2" stroke="#7B2FBE" stroke-width="2"/>
+              <rect x="10" y="2" width="8" height="4" rx="1" stroke="#7B2FBE" stroke-width="1.5"/>
+              <rect x="10" y="2" width="8" height="4" rx="1" fill="#d9d3f0"/>
+              <line x1="10" y1="12" x2="18" y2="12" stroke="#7B2FBE" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="10" y1="16" x2="15" y2="16" stroke="#7B2FBE" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="font-extrabold text-cr-dark text-xl leading-snug mb-2" style="font-family:'Montserrat',sans-serif;">Build<br/>Strategy</h3>
+          <div class="w-10 h-0.5 mb-4" style="background:#AAFF3E;"></div>
+          <p class="text-gray-500 text-sm leading-relaxed mb-5" style="font-family:'Montserrat',sans-serif;">We build the right strategy, messaging and choose the best channels and formats for your goals.</p>
+          <span class="inline-block border border-gray-300 text-gray-500 text-xs font-medium px-4 py-2 rounded-full" style="font-family:'Montserrat',sans-serif; background:rgba(255,255,255,0.7);">Planning &amp; Strategy</span>
         </div>
-      </div>
 
+        <!-- Step 03 -->
+        <div class="fade-up delay-3 relative z-10">
+          <div class="text-gray-300 font-extrabold leading-none mb-2" style="font-size:2.25rem; font-family:'Montserrat',sans-serif;">03</div>
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background:#d9d3f0;">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <path d="M14 3C14 3 21 6.5 21 14C21 17.5 19 19.5 14 24C9 19.5 7 17.5 7 14C7 6.5 14 3 14 3Z" stroke="#7B2FBE" stroke-width="2" stroke-linejoin="round"/>
+              <circle cx="14" cy="13" r="2.5" stroke="#7B2FBE" stroke-width="1.5"/>
+              <path d="M9 19.5L6 22.5" stroke="#7B2FBE" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M19 19.5L22 22.5" stroke="#7B2FBE" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="font-extrabold text-cr-dark text-xl leading-snug mb-2" style="font-family:'Montserrat',sans-serif;">Create &amp;<br/>Launch</h3>
+          <div class="w-10 h-0.5 mb-4" style="background:#AAFF3E;"></div>
+          <p class="text-gray-500 text-sm leading-relaxed mb-5" style="font-family:'Montserrat',sans-serif;">We design, build and launch your assets websites, ads and campaigns with a strong focus on results.</p>
+          <span class="inline-block border border-gray-300 text-gray-500 text-xs font-medium px-4 py-2 rounded-full" style="font-family:'Montserrat',sans-serif; background:rgba(255,255,255,0.7);">Design &amp; Launch</span>
+        </div>
+
+        <!-- Step 04 -->
+        <div class="fade-up delay-4 relative z-10">
+          <div class="text-gray-300 font-extrabold leading-none mb-2" style="font-size:2.25rem; font-family:'Montserrat',sans-serif;">04</div>
+          <div class="w-16 h-16 rounded-full flex items-center justify-center mb-6" style="background:#d9d3f0;">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+              <polyline points="3,22 10,13 16,17 25,7" stroke="#7B2FBE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="20,7 25,7 25,12" stroke="#7B2FBE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3 class="font-extrabold text-cr-dark text-xl leading-snug mb-2" style="font-family:'Montserrat',sans-serif;">Optimize &amp;<br/>Growth</h3>
+          <div class="w-10 h-0.5 mb-4" style="background:#AAFF3E;"></div>
+          <p class="text-gray-500 text-sm leading-relaxed mb-5" style="font-family:'Montserrat',sans-serif;">We test, analyze and optimize to improve performance, increase conversions and reduce spend.</p>
+          <span class="inline-block border border-gray-300 text-gray-500 text-xs font-medium px-4 py-2 rounded-full" style="font-family:'Montserrat',sans-serif; background:rgba(255,255,255,0.7);">Testing &amp; Optimization</span>
+        </div>
+
+      </div>
     </div>
+
+    <!-- CTA -->
+    <div class="text-center fade-up">
+      <a href="#contact" class="inline-flex items-center gap-3 bg-cr-lime text-cr-dark font-extrabold text-lg px-10 py-5 rounded-full cursor-pointer hover:brightness-105 transition-all" style="font-family:'Montserrat',sans-serif;">
+        Start your project
+        <svg class="w-5 h-5" fill="none" stroke="#0F0020" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+      </a>
+    </div>
+
   </div>
 </section>
 
