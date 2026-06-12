@@ -75,6 +75,23 @@
       box-shadow: 0 20px 40px rgba(123, 47, 190, 0.2);
     }
 
+    @font-face {
+      font-family: 'Erbaum';
+      src: url('fonts/Erbaum-Bold.woff2') format('woff2'),
+           url('fonts/Erbaum-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Erbaum';
+      src: url('fonts/Erbaum-Regular.woff2') format('woff2'),
+           url('fonts/Erbaum-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
     @media (prefers-reduced-motion: reduce) {
       .fade-up { opacity: 1; transform: none; transition: none; }
     }
@@ -528,28 +545,28 @@
       <div class="stat-item flex items-center gap-4 md:justify-center md:px-6">
         <img src="images/founder/Group 312.png" alt="" class="w-11 h-11 sm:w-12 sm:h-12 flex-shrink-0" />
         <div>
-          <p class="font-bold text-cr-dark text-base leading-tight">6+ Years</p>
+          <p class="font-bold text-cr-dark text-base leading-tight" style="font-family:'Erbaum',sans-serif;">6+ Years</p>
           <p class="text-gray-400 text-sm mt-0.5">of experience</p>
         </div>
       </div>
       <div class="stat-item flex items-center gap-4 md:justify-center md:px-6">
         <img src="images/founder/Group 313.png" alt="" class="w-11 h-11 sm:w-12 sm:h-12 flex-shrink-0" />
         <div>
-          <p class="font-bold text-cr-dark text-base leading-tight">Global Projects</p>
+          <p class="font-bold text-cr-dark text-base leading-tight" style="font-family:'Erbaum',sans-serif;">Global Projects</p>
           <p class="text-gray-400 text-sm mt-0.5">across multiple industries</p>
         </div>
       </div>
       <div class="stat-item flex items-center gap-4 md:justify-center md:px-6">
         <img src="images/founder/Group 314.png" alt="" class="w-11 h-11 sm:w-12 sm:h-12 flex-shrink-0" />
         <div>
-          <p class="font-bold text-cr-dark text-base leading-tight">$50K+/month</p>
+          <p class="font-bold text-cr-dark text-base leading-tight" style="font-family:'Erbaum',sans-serif;">$50K+/month</p>
           <p class="text-gray-400 text-sm mt-0.5">ad budgets managed</p>
         </div>
       </div>
       <div class="stat-item flex items-center gap-4 md:justify-center md:px-6">
         <img src="images/founder/Group 315.png" alt="" class="w-11 h-11 sm:w-12 sm:h-12 flex-shrink-0" />
         <div>
-          <p class="font-bold text-cr-dark text-base leading-tight">Client Focused</p>
+          <p class="font-bold text-cr-dark text-base leading-tight" style="font-family:'Erbaum',sans-serif;">Client Focused</p>
           <p class="text-gray-400 text-sm mt-0.5">results you can see</p>
         </div>
       </div>
@@ -557,7 +574,7 @@
 
     <!-- CTA -->
     <div class="mt-8 fade-up">
-      <a href="#contact" class="inline-flex items-center bg-cr-lime text-cr-dark font-bold text-base px-8 py-4 rounded-full hover:brightness-110 transition-all duration-200 cursor-pointer">
+      <a href="#contact" class="inline-flex items-center bg-cr-lime text-cr-dark font-bold text-lg px-8 py-4 rounded-full hover:brightness-110 transition-all duration-200 cursor-pointer" style="font-family:'Montserrat',sans-serif;">
         Let's work together
       </a>
     </div>
