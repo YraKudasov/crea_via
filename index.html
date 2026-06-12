@@ -105,6 +105,31 @@
         border-left: 1px solid #d1d5db;
       }
     }
+
+    /* Portfolio filters */
+    .pf-filter {
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.75);
+      border: 1.5px solid rgba(255,255,255,0.1);
+    }
+    .pf-filter:hover:not(.pf-active) {
+      background: rgba(255,255,255,0.14);
+      color: #fff;
+      border-color: rgba(255,255,255,0.2);
+    }
+    .pf-filter.pf-active {
+      background: #AAFF3E;
+      color: #0F0020;
+      border-color: #AAFF3E;
+    }
+
+    /* Portfolio item hide/show */
+    .pf-item {
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .pf-item.pf-hidden {
+      display: none;
+    }
   </style>
 </head>
 <body class="font-sans bg-white text-gray-900 overflow-x-hidden">
@@ -588,75 +613,131 @@
 <section id="portfolio" class="py-24 bg-cr-dark overflow-hidden">
   <div class="max-w-7xl mx-auto px-6">
 
-    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-16 gap-6 fade-up">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10 gap-6 fade-up">
       <div>
-        <span class="inline-block bg-white/10 text-cr-lime text-xs font-semibold px-4 py-1.5 rounded-full mb-4">Portfolio</span>
-        <h2 class="font-display text-4xl lg:text-5xl font-bold text-white">Work That<br/><span class="text-cr-lime">Drives Results</span></h2>
+        <span class="inline-block bg-white/10 text-cr-lime text-xs font-semibold px-4 py-1.5 rounded-full mb-4" style="font-family:'Montserrat',sans-serif;">Portfolio</span>
+        <h2 class="text-4xl lg:text-5xl font-extrabold text-white leading-tight" style="font-family:'Montserrat',sans-serif;">Work That<br/><span class="text-cr-lime">Drives Results</span></h2>
       </div>
-      <a href="#contact" class="inline-flex items-center gap-2 border-2 border-white/20 text-white text-sm font-semibold px-6 py-3 rounded-full hover:border-cr-lime hover:text-cr-lime transition-all duration-200 cursor-pointer">
+      <a href="#contact" class="self-start md:self-auto inline-flex items-center gap-2 border-2 border-white/20 text-white text-sm font-semibold px-6 py-3 rounded-full hover:border-cr-lime hover:text-cr-lime transition-all duration-200 cursor-pointer" style="font-family:'Montserrat',sans-serif;">
         Start Your Project
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
       </a>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <!-- Filter tabs -->
+    <div class="flex flex-wrap gap-3 mb-10 fade-up" id="pf-filters">
+      <button class="pf-filter pf-active flex items-center gap-2 text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 cursor-pointer" data-filter="all" style="font-family:'Montserrat',sans-serif;">
+        All Projects
+      </button>
+      <button class="pf-filter flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200 cursor-pointer" data-filter="web" style="font-family:'Montserrat',sans-serif;">
+        <img src="images/portfolio/icons/Group 317.png" alt="" class="w-6 h-6" aria-hidden="true" />
+        Web Design
+      </button>
+      <button class="pf-filter flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200 cursor-pointer" data-filter="smm" style="font-family:'Montserrat',sans-serif;">
+        <img src="images/portfolio/icons/Group 318.png" alt="" class="w-6 h-6" aria-hidden="true" />
+        SMM
+      </button>
+      <button class="pf-filter flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200 cursor-pointer" data-filter="design" style="font-family:'Montserrat',sans-serif;">
+        <img src="images/portfolio/icons/Group 319.png" alt="" class="w-6 h-6" aria-hidden="true" />
+        Design
+      </button>
+      <button class="pf-filter flex items-center gap-2 text-sm font-medium px-5 py-2.5 rounded-full transition-all duration-200 cursor-pointer" data-filter="marketing" style="font-family:'Montserrat',sans-serif;">
+        <img src="images/portfolio/icons/Group 320.png" alt="" class="w-6 h-6" aria-hidden="true" />
+        Marketing
+      </button>
+    </div>
 
-      <!-- Project 1 -->
-      <div class="fade-up delay-1 group cursor-pointer">
-        <div class="bg-cr-purple/20 border border-cr-purple/30 rounded-3xl overflow-hidden card-hover">
-          <div class="bg-gradient-to-br from-purple-900 to-cr-dark h-48 flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-tr from-cr-purple/30 to-transparent"></div>
-            <div class="text-center z-10">
-              <div class="font-display font-bold text-2xl text-white">Brand Studio</div>
-              <div class="text-cr-lime text-sm mt-1">Visual Identity</div>
-            </div>
+    <!-- Project grid -->
+    <div id="pf-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- ALPE Website — Web Design -->
+      <div class="pf-item fade-up delay-1" data-cat="web">
+        <div class="rounded-2xl overflow-hidden cursor-pointer group" style="background:#16002e;">
+          <div class="overflow-hidden">
+            <img src="images/portfolio/projects/Rectangle 230 (1).png" alt="ALPE website" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
           </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="text-white font-semibold">Bloom Cosmetics</h3>
-              <span class="text-xs bg-cr-lime/20 text-cr-lime px-2.5 py-1 rounded-full">Branding</span>
-            </div>
-            <p class="text-gray-400 text-sm">Full brand identity — logo, color system, packaging design.</p>
+          <div class="flex items-center justify-between px-5 py-4">
+            <h3 class="text-white font-semibold text-sm" style="font-family:'Montserrat',sans-serif;">ALPE Website</h3>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full text-cr-lime" style="background:rgba(170,255,62,0.15); font-family:'Montserrat',sans-serif;">Web Design</span>
           </div>
         </div>
       </div>
 
-      <!-- Project 2 -->
-      <div class="fade-up delay-2 group cursor-pointer">
-        <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden card-hover">
-          <div class="bg-gradient-to-br from-slate-800 to-cr-dark h-48 flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-tr from-blue-900/40 to-transparent"></div>
-            <div class="text-center z-10">
-              <div class="font-display font-bold text-2xl text-white">SaaS Platform</div>
-              <div class="text-blue-300 text-sm mt-1">Web Design</div>
-            </div>
+      <!-- Insurance Landing — Web Design -->
+      <div class="pf-item fade-up delay-2" data-cat="web">
+        <div class="rounded-2xl overflow-hidden cursor-pointer group" style="background:#16002e;">
+          <div class="overflow-hidden">
+            <img src="images/portfolio/projects/Rectangle 211.png" alt="Insurance landing page" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
           </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="text-white font-semibold">TaskFlow App</h3>
-              <span class="text-xs bg-blue-400/20 text-blue-300 px-2.5 py-1 rounded-full">Web Design</span>
-            </div>
-            <p class="text-gray-400 text-sm">Landing page redesign that boosted conversions by 84%.</p>
+          <div class="flex items-center justify-between px-5 py-4">
+            <h3 class="text-white font-semibold text-sm" style="font-family:'Montserrat',sans-serif;">Insurance Platform</h3>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full text-cr-lime" style="background:rgba(170,255,62,0.15); font-family:'Montserrat',sans-serif;">Web Design</span>
           </div>
         </div>
       </div>
 
-      <!-- Project 3 -->
-      <div class="fade-up delay-3 group cursor-pointer">
-        <div class="bg-white/5 border border-white/10 rounded-3xl overflow-hidden card-hover">
-          <div class="bg-gradient-to-br from-emerald-900 to-cr-dark h-48 flex items-center justify-center relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-to-tr from-cr-lime/10 to-transparent"></div>
-            <div class="text-center z-10">
-              <div class="font-display font-bold text-2xl text-white">Marketing</div>
-              <div class="text-cr-lime text-sm mt-1">Social Media</div>
-            </div>
+      <!-- Social Media Campaign — SMM -->
+      <div class="pf-item fade-up delay-3" data-cat="smm">
+        <div class="rounded-2xl overflow-hidden cursor-pointer group" style="background:#16002e;">
+          <div class="overflow-hidden">
+            <img src="images/portfolio/projects/Group 271.png" alt="Social media campaign" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
           </div>
-          <div class="p-6">
-            <div class="flex items-center justify-between mb-2">
-              <h3 class="text-white font-semibold">GreenLife Store</h3>
-              <span class="text-xs bg-cr-lime/20 text-cr-lime px-2.5 py-1 rounded-full">Marketing</span>
-            </div>
-            <p class="text-gray-400 text-sm">Social media strategy that grew followers 3x in 90 days.</p>
+          <div class="flex items-center justify-between px-5 py-4">
+            <h3 class="text-white font-semibold text-sm" style="font-family:'Montserrat',sans-serif;">Social Media Campaign</h3>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full text-white" style="background:rgba(123,47,190,0.35); font-family:'Montserrat',sans-serif;">SMM</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Brusnika Banners — Design -->
+      <div class="pf-item fade-up delay-1" data-cat="design">
+        <div class="rounded-2xl overflow-hidden cursor-pointer group" style="background:#16002e;">
+          <div class="overflow-hidden">
+            <img src="images/portfolio/projects/Rectangle 161.png" alt="Brusnika banner design" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          </div>
+          <div class="flex items-center justify-between px-5 py-4">
+            <h3 class="text-white font-semibold text-sm" style="font-family:'Montserrat',sans-serif;">Brusnika Banners</h3>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full text-white" style="background:rgba(255,255,255,0.12); font-family:'Montserrat',sans-serif;">Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Traffic Summit — Design -->
+      <div class="pf-item fade-up delay-2" data-cat="design">
+        <div class="rounded-2xl overflow-hidden cursor-pointer group" style="background:#16002e;">
+          <div class="overflow-hidden">
+            <img src="images/portfolio/projects/Rectangle 213.png" alt="Traffic Summit poster" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          </div>
+          <div class="flex items-center justify-between px-5 py-4">
+            <h3 class="text-white font-semibold text-sm" style="font-family:'Montserrat',sans-serif;">Traffic Summit</h3>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full text-white" style="background:rgba(255,255,255,0.12); font-family:'Montserrat',sans-serif;">Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- UPF Poster — Design -->
+      <div class="pf-item fade-up delay-3" data-cat="design">
+        <div class="rounded-2xl overflow-hidden cursor-pointer group" style="background:#16002e;">
+          <div class="overflow-hidden">
+            <img src="images/portfolio/projects/Rectangle 210.png" alt="UPF university poster" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          </div>
+          <div class="flex items-center justify-between px-5 py-4">
+            <h3 class="text-white font-semibold text-sm" style="font-family:'Montserrat',sans-serif;">UPF Poster</h3>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full text-white" style="background:rgba(255,255,255,0.12); font-family:'Montserrat',sans-serif;">Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email Template — Marketing -->
+      <div class="pf-item fade-up delay-1 md:col-span-2 lg:col-span-1" data-cat="marketing">
+        <div class="rounded-2xl overflow-hidden cursor-pointer group" style="background:#16002e;">
+          <div class="overflow-hidden">
+            <img src="images/portfolio/projects/Rectangle 214.png" alt="Email template design" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+          </div>
+          <div class="flex items-center justify-between px-5 py-4">
+            <h3 class="text-white font-semibold text-sm" style="font-family:'Montserrat',sans-serif;">Event Email Template</h3>
+            <span class="text-xs font-semibold px-3 py-1 rounded-full text-cr-lime" style="background:rgba(170,255,62,0.15); font-family:'Montserrat',sans-serif;">Marketing</span>
           </div>
         </div>
       </div>
@@ -1053,6 +1134,22 @@
     btn.classList.add('bg-green-500', 'text-white')
     btn.disabled = true
   }
+
+  // Portfolio filters
+  document.querySelectorAll('.pf-filter').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.dataset.filter
+      document.querySelectorAll('.pf-filter').forEach(b => b.classList.remove('pf-active'))
+      btn.classList.add('pf-active')
+      document.querySelectorAll('.pf-item').forEach(item => {
+        if (filter === 'all' || item.dataset.cat === filter) {
+          item.classList.remove('pf-hidden')
+        } else {
+          item.classList.add('pf-hidden')
+        }
+      })
+    })
+  })
 </script>
 
 </body>
