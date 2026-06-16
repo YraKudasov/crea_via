@@ -48,6 +48,21 @@
     .fade-up.delay-3 { transition-delay: 0.3s; }
     .fade-up.delay-4 { transition-delay: 0.4s; }
 
+    /* Impact cards equal height on mobile */
+    @media (max-width: 767px) {
+      .impact-card { min-height: 380px; }
+      .impact-img-wrap { height: 140px !important; }
+      .impact-card5-icon { width: 3rem; height: 3rem; }
+      .impact-card3-img {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 65%;
+        height: 140px !important;
+        margin: 0 !important;
+      }
+    }
+
     .faq-body {
       max-height: 0;
       overflow: hidden;
@@ -937,7 +952,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4 items-stretch">
 
       <!-- Card 1: +20-40% -->
-      <div class="fade-up delay-1 rounded-3xl p-6 flex flex-col overflow-hidden hover:scale-105 cursor-default" style="background:#fff; box-shadow:0 8px 32px rgba(123,47,190,0.15);">
+      <div class="impact-card fade-up delay-1 rounded-3xl p-6 flex flex-col overflow-hidden hover:scale-105 cursor-default" style="background:#fff; box-shadow:0 8px 32px rgba(123,47,190,0.15);">
         <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 mx-auto" style="background:#EDE8F8;">
           <img src="images/impact/icons/Union (5).png" alt="" class="w-10 h-10 object-contain" aria-hidden="true"/>
         </div>
@@ -945,13 +960,13 @@
         <div class="font-bold text-cr-dark text-sm mb-2 leading-snug text-center" style="font-family:'Montserrat',sans-serif;">Higher Conversion<br/>Rates</div>
         <div class="w-8 h-0.5 mb-3 mx-auto" style="background:#AAFF3E;"></div>
         <p class="text-cr-dark text-xs leading-relaxed mb-4 text-center" style="font-family:'Montserrat',sans-serif;">Better UX, messaging &amp; targeting</p>
-        <div class="mt-auto flex justify-center items-end h-[220px] lg:h-[200px]">
+        <div class="impact-img-wrap mt-auto flex justify-center items-end lg:h-[200px]">
           <img src="images/impact/Group 323.png" alt="" aria-hidden="true" style="max-width:100%; max-height:100%; object-fit:contain;"/>
         </div>
       </div>
 
       <!-- Card 2: ↓ CPL -->
-      <div class="fade-up delay-2 rounded-3xl p-6 flex flex-col overflow-hidden hover:scale-105 cursor-default" style="background:#fff; box-shadow:0 8px 32px rgba(123,47,190,0.15);">
+      <div class="impact-card fade-up delay-2 rounded-3xl p-6 flex flex-col overflow-hidden hover:scale-105 cursor-default" style="background:#fff; box-shadow:0 8px 32px rgba(123,47,190,0.15);">
         <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 mx-auto" style="background:#EDE8F8;">
           <img src="images/impact/icons/Union (6).png" alt="" class="w-10 h-10 object-contain" aria-hidden="true"/>
         </div>
@@ -959,13 +974,13 @@
         <div class="font-bold text-cr-dark text-sm mb-2 leading-snug text-center" style="font-family:'Montserrat',sans-serif;">Lower Cost<br/>Per Lead</div>
         <div class="w-8 h-0.5 mb-3 mx-auto" style="background:#AAFF3E;"></div>
         <p class="text-cr-dark text-xs leading-relaxed mb-4 text-center" style="font-family:'Montserrat',sans-serif;">Smarter targeting &amp; creatives</p>
-        <div class="mt-auto flex justify-center items-end" style="height:160px;">
+        <div class="impact-img-wrap mt-auto flex justify-center items-end lg:h-[160px]">
           <img src="images/impact/Group 324.png" alt="" aria-hidden="true" style="max-width:100%; max-height:100%; object-fit:contain;"/>
         </div>
       </div>
 
       <!-- Card 3: 2x Faster (featured) -->
-      <div class="fade-up delay-3 rounded-3xl p-6 flex flex-col overflow-hidden hover:scale-105 cursor-default" style="background:#2D1060; box-shadow:0 8px 32px rgba(123,47,190,0.35);">
+      <div class="impact-card fade-up delay-3 rounded-3xl p-6 flex flex-col overflow-hidden hover:scale-105 cursor-default" style="background:#2D1060; box-shadow:0 8px 32px rgba(123,47,190,0.35); position:relative;">
         <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 mx-auto" style="background:rgba(255,255,255,0.15);">
           <img src="images/impact/icons/Group 280.png" alt="" class="w-10 h-10 object-contain" aria-hidden="true"/>
         </div>
@@ -973,13 +988,13 @@
         <div class="font-bold text-white text-sm mb-2 leading-snug text-center" style="font-family:'Montserrat',sans-serif;">Campaign<br/>Launch Process</div>
         <div class="w-8 h-0.5 mb-3 mx-auto" style="background:#AAFF3E;"></div>
         <p class="text-white text-xs leading-relaxed mb-4 text-center" style="font-family:'Montserrat',sans-serif;">AI-assisted workflows &amp; production</p>
-        <div class="mt-auto flex justify-start items-end -mx-6 -mb-6 overflow-hidden" style="height:160px;">
+        <div class="impact-img-wrap impact-card3-img mt-auto flex justify-start items-end lg:-mx-6 lg:-mb-6 overflow-hidden lg:h-[160px]">
           <img src="images/impact/Mask group.png" alt="" aria-hidden="true" style="max-width:110%; max-height:110%; object-fit:contain; object-position:left bottom;"/>
         </div>
       </div>
 
       <!-- Card 4: Better ROI -->
-      <div class="fade-up delay-4 rounded-3xl p-6 flex flex-col overflow-hidden hover:scale-105 cursor-default" style="background:#fff; box-shadow:0 8px 32px rgba(123,47,190,0.15);">
+      <div class="impact-card fade-up delay-4 rounded-3xl p-6 flex flex-col overflow-hidden hover:scale-105 cursor-default" style="background:#fff; box-shadow:0 8px 32px rgba(123,47,190,0.15);">
         <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 mx-auto" style="background:#EDE8F8;">
           <img src="images/impact/icons/Union (7).png" alt="" class="w-10 h-10 object-contain" aria-hidden="true"/>
         </div>
@@ -987,20 +1002,20 @@
         <div class="font-bold text-cr-dark text-sm mb-2 leading-snug text-center" style="font-family:'Montserrat',sans-serif;">Optimization<br/>&amp; Testing</div>
         <div class="w-8 h-0.5 mb-3 mx-auto" style="background:#AAFF3E;"></div>
         <p class="text-cr-dark text-xs leading-relaxed mb-4 text-center" style="font-family:'Montserrat',sans-serif;">Continuous improvements based on data</p>
-        <div class="mt-auto flex justify-center items-end h-[120px] lg:h-[120px]">
+        <div class="impact-img-wrap mt-auto flex justify-center items-end lg:h-[120px]">
           <img src="images/impact/Group 325.png" alt="" aria-hidden="true" style="max-width:100%; max-height:100%; object-fit:contain;"/>
         </div>
       </div>
 
       <!-- Card 5: AI-Assisted -->
-      <div class="fade-up delay-5 rounded-3xl p-6 flex flex-col overflow-hidden hover:scale-105 cursor-default" style="background:#fff; box-shadow:0 8px 32px rgba(123,47,190,0.15);">
+      <div class="impact-card fade-up delay-5 rounded-3xl p-6 flex flex-col overflow-hidden hover:scale-105 cursor-default" style="background:#fff; box-shadow:0 8px 32px rgba(123,47,190,0.15);">
         <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 mx-auto" style="background:#EDE8F8;">
-          <img src="images/impact/icons/Union (8).png" alt="" class="w-10 h-10 object-contain" aria-hidden="true"/>
+          <img src="images/impact/icons/Union (8).png" alt="" class="w-10 h-10 object-contain impact-card5-icon" aria-hidden="true"/>
         </div>
         <div class="text-cr-purple font-extrabold text-2xl leading-tight mb-1 text-center" style="font-family:'Montserrat',sans-serif;">AI-Assisted<br/>Workflows</div>
         <div class="w-8 h-0.5 mb-3 mt-2 mx-auto" style="background:#AAFF3E;"></div>
         <p class="text-cr-dark text-xs leading-relaxed mb-4 text-center" style="font-family:'Montserrat',sans-serif;">Faster execution, smarter decisions</p>
-        <div class="mt-auto flex justify-center items-end" style="height:160px;">
+        <div class="impact-img-wrap mt-auto flex justify-center items-end lg:h-[160px]">
           <img src="images/impact/Group 326.png" alt="" aria-hidden="true" style="max-width:100%; max-height:100%; object-fit:contain;"/>
         </div>
       </div>
