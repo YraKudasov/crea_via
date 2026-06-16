@@ -56,6 +56,13 @@
     .faq-body.open {
       max-height: 300px;
     }
+    .faq-item.is-open {
+      background: rgba(255,255,255,0.92) !important;
+    }
+    .faq-item.is-open .faq-icon {
+      background: #e8e3f5;
+      color: #5032C7;
+    }
 
     .nav-link {
       position: relative;
@@ -1163,70 +1170,80 @@
 <section id="faq" class="py-24 overflow-hidden">
   <div class="max-w-3xl mx-auto px-6">
 
-    <div class="text-center mb-16 fade-up">
-      <span class="inline-block text-white/70 text-xs font-semibold px-4 py-1.5 rounded-full mb-4 border border-white/30">FAQ</span>
-      <h2 class="font-montserrat text-4xl font-bold text-white">Frequently Asked<br/><span class="text-cr-lime">Questions</span></h2>
+    <div class="text-center mb-10 fade-up">
+      <h2 class="font-montserrat text-2xl lg:text-3xl font-extrabold text-white uppercase tracking-widest mb-3">Frequently Asked Questions</h2>
+      <p class="font-montserrat text-white/70 text-base">Questions clients usually ask</p>
     </div>
 
-    <div class="space-y-4 fade-up">
+    <div class="space-y-3 fade-up">
 
-      <div class="faq-item border border-white/20 rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer hover:bg-white/10 transition-colors duration-150" aria-expanded="false">
-          <span class="font-semibold text-white text-sm">How long does a typical project take?</span>
-          <svg class="faq-icon w-5 h-5 text-white/60 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      <div class="faq-item rounded-3xl overflow-hidden" style="background:rgba(255,255,255,0.72);">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer" aria-expanded="false">
+          <span class="faq-question font-montserrat font-bold text-base" style="color:#0F0020;">How fast can you start?</span>
+          <span class="faq-icon w-9 h-9 rounded-full bg-white flex items-center justify-center flex-shrink-0 ml-4 font-bold text-xl" style="color:#7B2FBE; line-height:1;">+</span>
         </button>
         <div class="faq-body">
-          <p class="px-6 pb-5 text-white/70 text-sm leading-relaxed">Brand identity projects typically take 1–2 weeks, landing pages 2–3 weeks, and full web design 3–5 weeks. Timelines depend on project scope and how quickly feedback is provided.</p>
+          <p class="faq-answer px-6 pb-5 font-montserrat text-sm leading-relaxed" style="color:#3a3a5c;">Usually within 3–7 business days, depending on the project scope and current availability.</p>
         </div>
       </div>
 
-      <div class="faq-item border border-white/20 rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer hover:bg-white/10 transition-colors duration-150" aria-expanded="false">
-          <span class="font-semibold text-white text-sm">What's included in the Brand Identity package?</span>
-          <svg class="faq-icon w-5 h-5 text-white/60 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      <div class="faq-item rounded-3xl overflow-hidden" style="background:rgba(255,255,255,0.72);">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer" aria-expanded="false">
+          <span class="faq-question font-montserrat font-bold text-base" style="color:#0F0020;">Do you work globally?</span>
+          <span class="faq-icon w-9 h-9 rounded-full bg-white flex items-center justify-center flex-shrink-0 ml-4 font-bold text-xl" style="color:#7B2FBE; line-height:1;">+</span>
         </button>
         <div class="faq-body">
-          <p class="px-6 pb-5 text-white/70 text-sm leading-relaxed">Logo design (primary + secondary + icon), color palette, typography system, brand guidelines PDF, and all source files delivered in multiple formats.</p>
+          <p class="faq-answer px-6 pb-5 font-montserrat text-sm leading-relaxed" style="color:#3a3a5c;">Yes, we work with clients worldwide. All communication is in English and we accommodate different time zones.</p>
         </div>
       </div>
 
-      <div class="faq-item border border-white/20 rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer hover:bg-white/10 transition-colors duration-150" aria-expanded="false">
-          <span class="font-semibold text-white text-sm">Do you work with international clients?</span>
-          <svg class="faq-icon w-5 h-5 text-white/60 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      <div class="faq-item rounded-3xl overflow-hidden" style="background:rgba(255,255,255,0.72);">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer" aria-expanded="false">
+          <span class="faq-question font-montserrat font-bold text-base" style="color:#0F0020;">Can you handle both design and marketing?</span>
+          <span class="faq-icon w-9 h-9 rounded-full bg-white flex items-center justify-center flex-shrink-0 ml-4 font-bold text-xl" style="color:#7B2FBE; line-height:1;">+</span>
         </button>
         <div class="faq-body">
-          <p class="px-6 pb-5 text-white/70 text-sm leading-relaxed">Absolutely! I work with clients worldwide. All communication is in English, and payment is accepted via international methods (Stripe, PayPal, bank transfer).</p>
+          <p class="faq-answer px-6 pb-5 font-montserrat text-sm leading-relaxed" style="color:#3a3a5c;">Absolutely. Creavia specializes in combining design and marketing — from brand identity and websites to ad creatives and growth campaigns.</p>
         </div>
       </div>
 
-      <div class="faq-item border border-white/20 rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer hover:bg-white/10 transition-colors duration-150" aria-expanded="false">
-          <span class="font-semibold text-white text-sm">How many revisions are included?</span>
-          <svg class="faq-icon w-5 h-5 text-white/60 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      <div class="faq-item rounded-3xl overflow-hidden" style="background:rgba(255,255,255,0.72);">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer" aria-expanded="false">
+          <span class="faq-question font-montserrat font-bold text-base" style="color:#0F0020;">What types of businesses do you work with?</span>
+          <span class="faq-icon w-9 h-9 rounded-full bg-white flex items-center justify-center flex-shrink-0 ml-4 font-bold text-xl" style="color:#7B2FBE; line-height:1;">+</span>
         </button>
         <div class="faq-body">
-          <p class="px-6 pb-5 text-white/70 text-sm leading-relaxed">All packages include 2 rounds of revisions. Additional rounds can be arranged at a small fee. My goal is to get it right, and I work closely with you to ensure satisfaction.</p>
+          <p class="faq-answer px-6 pb-5 font-montserrat text-sm leading-relaxed" style="color:#3a3a5c;">We work with startups, SMEs, and growing businesses across various industries looking to strengthen their brand and marketing.</p>
         </div>
       </div>
 
-      <div class="faq-item border border-white/20 rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer hover:bg-white/10 transition-colors duration-150" aria-expanded="false">
-          <span class="font-semibold text-white text-sm">What information do you need to get started?</span>
-          <svg class="faq-icon w-5 h-5 text-white/60 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      <div class="faq-item rounded-3xl overflow-hidden" style="background:rgba(255,255,255,0.72);">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer" aria-expanded="false">
+          <span class="faq-question font-montserrat font-bold text-base" style="color:#0F0020;">How much do your services cost?</span>
+          <span class="faq-icon w-9 h-9 rounded-full bg-white flex items-center justify-center flex-shrink-0 ml-4 font-bold text-xl" style="color:#7B2FBE; line-height:1;">+</span>
         </button>
         <div class="faq-body">
-          <p class="px-6 pb-5 text-white/70 text-sm leading-relaxed">A brief describing your business, target audience, goals, and any design preferences or references you like. We'll kick off with a discovery call to gather everything we need.</p>
+          <p class="faq-answer px-6 pb-5 font-montserrat text-sm leading-relaxed" style="color:#3a3a5c;">Pricing depends on the scope of the project. Contact us for a free consultation and a custom quote tailored to your needs.</p>
         </div>
       </div>
 
-      <div class="faq-item border border-white/20 rounded-2xl overflow-hidden">
-        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer hover:bg-white/10 transition-colors duration-150" aria-expanded="false">
-          <span class="font-semibold text-white text-sm">Do you offer ongoing marketing support?</span>
-          <svg class="faq-icon w-5 h-5 text-white/60 flex-shrink-0 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      <div class="faq-item rounded-3xl overflow-hidden" style="background:rgba(255,255,255,0.72);">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer" aria-expanded="false">
+          <span class="faq-question font-montserrat font-bold text-base" style="color:#0F0020;">What platforms and tools do you work with?</span>
+          <span class="faq-icon w-9 h-9 rounded-full bg-white flex items-center justify-center flex-shrink-0 ml-4 font-bold text-xl" style="color:#7B2FBE; line-height:1;">+</span>
         </button>
         <div class="faq-body">
-          <p class="px-6 pb-5 text-white/70 text-sm leading-relaxed">Yes! Monthly retainer packages are available for social media management, content creation, and paid ads. Ask about it during our discovery call.</p>
+          <p class="faq-answer px-6 pb-5 font-montserrat text-sm leading-relaxed" style="color:#3a3a5c;">We work with Figma, Webflow, WordPress, Meta Ads, Google Ads, HubSpot, and more — whatever fits your business best.</p>
+        </div>
+      </div>
+
+      <div class="faq-item rounded-3xl overflow-hidden" style="background:rgba(255,255,255,0.72);">
+        <button class="faq-trigger w-full flex items-center justify-between px-6 py-5 text-left cursor-pointer" aria-expanded="false">
+          <span class="faq-question font-montserrat font-bold text-base" style="color:#0F0020;">How fast do you deliver projects?</span>
+          <span class="faq-icon w-9 h-9 rounded-full bg-white flex items-center justify-center flex-shrink-0 ml-4 font-bold text-xl" style="color:#7B2FBE; line-height:1;">+</span>
+        </button>
+        <div class="faq-body">
+          <p class="faq-answer px-6 pb-5 font-montserrat text-sm leading-relaxed" style="color:#3a3a5c;">Landing pages in 1–2 weeks, brand identities in 2–3 weeks, full campaigns vary by scope. We always agree on a timeline upfront.</p>
         </div>
       </div>
 
@@ -1319,12 +1336,14 @@
 
       // Close all
       document.querySelectorAll('.faq-body').forEach(b => b.classList.remove('open'))
-      document.querySelectorAll('.faq-icon').forEach(i => i.style.transform = 'rotate(0deg)')
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('is-open'))
+      document.querySelectorAll('.faq-icon').forEach(i => i.textContent = '+')
       document.querySelectorAll('.faq-trigger').forEach(t => t.setAttribute('aria-expanded', 'false'))
 
       if (!isOpen) {
         body.classList.add('open')
-        icon.style.transform = 'rotate(180deg)'
+        item.classList.add('is-open')
+        icon.textContent = '×'
         trigger.setAttribute('aria-expanded', 'true')
       }
     })
