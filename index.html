@@ -1255,38 +1255,83 @@
 <!-- ═══════════════════════════════════════════════════════════
      FOOTER
 ═══════════════════════════════════════════════════════════ -->
-<footer class="bg-white overflow-hidden">
+<footer style="background:#ffffff;">
 
-  <!-- Purple wordmark block -->
-  <div class="bg-cr-purple rounded-t-[2.5rem] mx-4 md:mx-8 overflow-hidden">
-    <div class="flex items-center justify-center py-10 md:py-14 px-6">
-      <!-- CREAVIA SVG wordmark with leaf on Í -->
-      <div class="relative select-none" aria-label="CREAVIA">
-        <span class="font-display font-bold text-[15vw] md:text-[13vw] lg:text-[11vw] leading-none text-white tracking-tight">CREA</span><span class="font-display font-bold text-[15vw] md:text-[13vw] lg:text-[11vw] leading-none text-white tracking-tight relative inline-block">
-          V
-          <span class="relative inline-block">
-            Í
-            <!-- leaf accent above Í -->
-            <svg class="absolute left-1/2 -translate-x-1/2 text-white" style="top:-0.55em; width:0.22em; height:0.32em;" viewBox="0 0 10 14" fill="currentColor" aria-hidden="true">
-              <path d="M5 0 C5 0, 10 5, 5 14 C0 5, 5 0Z"/>
-            </svg>
-          </span>
-        </span><span class="font-display font-bold text-[15vw] md:text-[13vw] lg:text-[11vw] leading-none text-white tracking-tight">A</span>
+  <!-- Purple block with rounded bottom corners -->
+  <div style="background:#5032C7; border-radius:0 0 4rem 4rem; overflow:visible;">
+
+  <!-- Top: COMPANY + CONTACT -->
+  <div class="max-w-7xl mx-auto px-8 md:px-16 pt-14 pb-10" style="display:grid; grid-template-columns:2fr 3fr; gap:3rem;">
+
+    <!-- COMPANY -->
+    <div>
+      <h3 class="font-montserrat font-bold text-cr-lime text-xs tracking-widest uppercase mb-7">Company</h3>
+      <ul class="space-y-4">
+        <li><a href="#about" class="font-montserrat text-white text-sm hover:text-cr-lime transition-colors cursor-pointer">About us</a></li>
+        <li><a href="#services" class="font-montserrat text-white text-sm hover:text-cr-lime transition-colors cursor-pointer">Services</a></li>
+        <li><a href="#portfolio" class="font-montserrat text-white text-sm hover:text-cr-lime transition-colors cursor-pointer">Case Studies</a></li>
+        <li><a href="#contact" class="font-montserrat text-white text-sm hover:text-cr-lime transition-colors cursor-pointer">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div>
+      <h3 class="font-montserrat font-bold text-cr-lime text-xs tracking-widest uppercase mb-7">Contact</h3>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5rem 2rem;">
+        <!-- Email -->
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(255,255,255,0.18);">
+            <img src="images/footer/Union (9).png" class="w-5 h-5 object-contain" alt="" aria-hidden="true" style="filter:brightness(10);"/>
+          </div>
+          <span class="font-montserrat text-white text-sm">hello@creavia.es</span>
+        </div>
+        <!-- Location -->
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(255,255,255,0.18);">
+            <img src="images/footer/Union (10).png" class="w-5 h-5 object-contain" alt="" aria-hidden="true" style="filter:brightness(10);"/>
+          </div>
+          <div>
+            <div class="font-montserrat text-white text-sm font-semibold leading-tight">Barcelona, Spain</div>
+            <div class="font-montserrat text-white/50 text-xs mt-0.5">Working globally</div>
+          </div>
+        </div>
+        <!-- LinkedIn -->
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(255,255,255,0.18);">
+            <img src="images/footer/Union (11).png" class="w-5 h-5 object-contain" alt="" aria-hidden="true" style="filter:brightness(10);"/>
+          </div>
+          <span class="font-montserrat text-white text-sm">Connect on LinkedIn</span>
+        </div>
+        <!-- Behance -->
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background:rgba(255,255,255,0.18);">
+            <img src="images/footer/Union (19).png" class="w-7 h-7 object-contain" alt="" aria-hidden="true" style="filter:brightness(10);"/>
+          </div>
+          <span class="font-montserrat text-white text-sm">Connect on Behance</span>
+        </div>
       </div>
     </div>
+
   </div>
 
+  <!-- CREAVIA large wordmark -->
+  <div style="transform:translateY(15px); position:relative; z-index:1;">
+    <img src="images/footer/Vector.png" alt="CREAVIA" class="w-full object-contain object-center select-none pointer-events-none" style="max-height:220px;" aria-hidden="false"/>
+  </div>
+
+  </div><!-- end purple block -->
+
   <!-- White bottom bar -->
-  <div class="px-8 md:px-12 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
-    <p class="text-gray-400 text-xs">© 2026 CREAVIA. All rights reserved.</p>
+  <div class="bg-white px-8 md:px-16 py-5 flex flex-col md:flex-row items-center justify-between gap-3">
+    <p class="font-montserrat text-gray-800 text-xs">@ 2026 CREAVIA. All rights reserved.</p>
     <div class="flex items-center gap-1 flex-wrap justify-center">
-      <a href="#" class="text-gray-400 text-xs hover:text-cr-purple transition-colors cursor-pointer">Privacy Policy</a>
-      <span class="text-gray-300 text-xs mx-1">•</span>
-      <a href="#" class="text-gray-400 text-xs hover:text-cr-purple transition-colors cursor-pointer">Terms of service</a>
-      <span class="text-gray-300 text-xs mx-1">•</span>
-      <a href="#" class="text-gray-400 text-xs hover:text-cr-purple transition-colors cursor-pointer">Cookie Policy</a>
-      <span class="text-gray-300 text-xs mx-1">•</span>
-      <a href="#" class="text-gray-400 text-xs hover:text-cr-purple transition-colors cursor-pointer">Legal Notice</a>
+      <a href="#" class="font-montserrat text-gray-800 text-xs hover:text-cr-purple transition-colors cursor-pointer">Privacy Policy</a>
+      <span class="text-gray-800 text-xs mx-2">•</span>
+      <a href="#" class="font-montserrat text-gray-800 text-xs hover:text-cr-purple transition-colors cursor-pointer">Terms of service</a>
+      <span class="text-gray-800 text-xs mx-2">•</span>
+      <a href="#" class="font-montserrat text-gray-800 text-xs hover:text-cr-purple transition-colors cursor-pointer">Cookie Policy</a>
+      <span class="text-gray-800 text-xs mx-2">•</span>
+      <a href="#" class="font-montserrat text-gray-800 text-xs hover:text-cr-purple transition-colors cursor-pointer">Legal Notice</a>
     </div>
   </div>
 
